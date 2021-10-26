@@ -60,6 +60,7 @@ resource "aws_iam_policy_attachment" "global-policy-attachment" {
   roles      = ["${aws_iam_role.global-instance-role.id}"]
 }
 
+
 resource "aws_iam_instance_profile" "global-instance-profile" {
   name = "web-profile"
   role = aws_iam_role.global-instance-role.name
